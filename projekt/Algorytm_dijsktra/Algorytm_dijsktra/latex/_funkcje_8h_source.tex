@@ -1,0 +1,28 @@
+\hypertarget{_funkcje_8h_source}{}\doxysection{Funkcje.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ std::map<std::string,\ std::set<std::pair<std::string,\ double>>>Graf;}
+\DoxyCodeLine{00013\ Graf\ Get\_graph(\textcolor{keyword}{const}\ std::string\&\ Graph);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ std::vector<std::string>All\_vertices(\textcolor{keyword}{const}\ Graf\&\ graph);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ std::vector<std::string>\ get\_vertices(\textcolor{keyword}{const}\ std::string\&\ Vertices);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ std::map<std::string,\ double>\ Dijkstra(\textcolor{keyword}{const}\ Graf\&\ graph,\ std::string\ node,}
+\DoxyCodeLine{00020\ \ \ \ \ std::map<std::string,\ std::string>\&\ last\_step);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ std::vector<std::vector<std::string>>step\_by\_step(std::map<std::string,\ double>\&\ result,\ std::map<std::string,\ std::string>\&\ last\_step,}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ start\_node);}
+
+\end{DoxyCode}

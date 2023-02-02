@@ -1,0 +1,36 @@
+W tym pliku zostan¹ zapisane najkrótsze trasy do pozosta³ych wierzcho³ków z punktów podanych w pliku: Vertices.txt
+jeœli danego wierzcho³ka nie ma w grafie zostanie przekazany komunikat o tym
+najkrotsze œcie¿ki dla wierzcho³ka  A :  
+A-> B : 5
+A-> C : 2.5
+A-> C-> D : 5.5
+A-> C-> E : 3.5
+A-> C-> F : 7
+A-> C-> H-> G : 13.5
+A-> C-> H : 6.5
+A-> C-> H-> I : 10.5
+A-> C-> H-> I-> J : 12.5
+A-> C-> E-> K : 11.5
+najkrotsze œcie¿ki dla wierzcho³ka  D :  
+D-> E-> C-> F-> A : 15.5
+D-> E-> C-> F-> A-> B : 20.5
+D-> E-> C : 2
+D-> E : 1
+D-> E-> C-> F : 6.5
+D-> E-> C-> H-> G : 13
+D-> E-> C-> H : 6
+D-> E-> C-> H-> I : 10
+D-> E-> C-> H-> I-> J : 12
+D-> E-> K : 9
+najkrotsze œcie¿ki dla wierzcho³ka  G :  
+G-> H-> C-> F-> A : 24.5
+G-> H-> C-> F-> A-> B : 29.5
+G-> H-> C : 11
+G-> H-> C-> D : 14
+G-> H-> C-> E : 12
+G-> H-> C-> F : 15.5
+G-> H : 7
+G-> H-> I : 11
+G-> H-> I-> J : 13
+G-> H-> I-> K : 12
+Brak wierzcholka Y w grafie

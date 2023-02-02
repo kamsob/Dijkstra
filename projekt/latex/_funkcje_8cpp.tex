@@ -1,0 +1,104 @@
+\doxysection{Funkcje.\+cpp File Reference}
+\label{_funkcje_8cpp}\index{Funkcje.cpp@{Funkcje.cpp}}
+{\ttfamily \#include \char`\"{}Funkcje.\+h\char`\"{}}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::set$<$ std\+::pair$<$ std\+::string, double $>$ $>$ $>$ \textbf{ Graf}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Graf} \textbf{ Get\+\_\+graph} (const std\+::string \&Graph)
+\item 
+std\+::vector$<$ std\+::string $>$ \textbf{ All\+\_\+vertices} (const \textbf{ Graf} \&graph)
+\item 
+std\+::vector$<$ std\+::string $>$ \textbf{ get\+\_\+vertices} (const std\+::string \&Vertices)
+\begin{DoxyCompactList}\small\item\em funkcja wstawiajaca do vektora first\+\_\+vertices wierzcholki startowe z pliku tekstowego Vertices.\+txt \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, double $>$ \textbf{ Dijkstra} (const \textbf{ Graf} \&graph, std\+::string node, std\+::map$<$ std\+::string, std\+::string $>$ \&last\+\_\+step)
+\begin{DoxyCompactList}\small\item\em Dijkstra. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \textbf{ step\+\_\+by\+\_\+step} (std\+::map$<$ std\+::string, double $>$ \&result, std\+::map$<$ std\+::string, std\+::string $>$ \&last\+\_\+step, std\+::string start\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Przywracanie sciezki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{_funkcje_8cpp_a642c82656f760b6e1a86b4afac216a22}} 
+\index{Funkcje.cpp@{Funkcje.cpp}!Graf@{Graf}}
+\index{Graf@{Graf}!Funkcje.cpp@{Funkcje.cpp}}
+\doxysubsubsection{Graf}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, std\+::set$<$std\+::pair$<$std\+::string, double$>$ $>$ $>$ \textbf{ Graf}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{_funkcje_8cpp_ab87e1c066955842cc7eba6c9c9a45681}} 
+\index{Funkcje.cpp@{Funkcje.cpp}!All\_vertices@{All\_vertices}}
+\index{All\_vertices@{All\_vertices}!Funkcje.cpp@{Funkcje.cpp}}
+\doxysubsubsection{All\_vertices()}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ All\+\_\+vertices (\begin{DoxyParamCaption}\item[{const \textbf{ Graf} \&}]{graph }\end{DoxyParamCaption})}
+
+pozyskanie wszystkich wierzcholkow
+
+zmienna bierze kazdy wierzcholek z grafu i dodaje go do vektora all\+\_\+vertices(potrzebne do stwierdzenia czy podany wierzcholek znajduje sie w Grafie -\/ za pomoc operatora -\/$>$\mbox{\label{_funkcje_8cpp_a5fdbb8866195e5554b9c595e928bb0eb}} 
+\index{Funkcje.cpp@{Funkcje.cpp}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!Funkcje.cpp@{Funkcje.cpp}}
+\doxysubsubsection{Dijkstra()}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, double $>$ Dijkstra (\begin{DoxyParamCaption}\item[{const \textbf{ Graf} \&}]{graph,  }\item[{std\+::string}]{node,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{last\+\_\+step }\end{DoxyParamCaption})}
+
+
+
+Dijkstra. 
+
+mapa result przechowuje najkrotsze odleglosci od startowego wierzcholka do kazdego innego
+
+visited -\/ wierzcholki odwiedzone ale jeszcze nie przeanalizowane
+
+dla kazdego wierzcholka ustawiam odleglosc na nieskonczonosc z wyjatkiem node czyli tego w ktorym jestesmy
+
+porownanie odleglosci od wierzcholka w ktorym sie znajdujemy(node)
+
+mapa last\+\_\+step przechowuje dla kazdego wierzch. ostatni odwiedzony wierzch -\/ potrzebne do odzyskania sciezki
+
+ustawia node(wlasnie analizowany wierzcholek) na najblizszego sasiada wierzcholka w ktorym jestesmy(node)\mbox{\label{_funkcje_8cpp_a2fb8e23e626a8cf04563782d398fc41b}} 
+\index{Funkcje.cpp@{Funkcje.cpp}!Get\_graph@{Get\_graph}}
+\index{Get\_graph@{Get\_graph}!Funkcje.cpp@{Funkcje.cpp}}
+\doxysubsubsection{Get\_graph()}
+{\footnotesize\ttfamily \textbf{ Graf} Get\+\_\+graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Graph }\end{DoxyParamCaption})}
+
+zapomoca getline zczytuje z kazdej linii i przy pomocy istringstream przypisuje do odpowiednich zmiennych
+
+sign wskazuje czy polaczenie jest skierowane czy dziala w dwie strony
+
+polaczenie nieskierowane
+
+polaczenie\mbox{\label{_funkcje_8cpp_aec8bb47bfdcd397c7178a475ce712aed}} 
+\index{Funkcje.cpp@{Funkcje.cpp}!get\_vertices@{get\_vertices}}
+\index{get\_vertices@{get\_vertices}!Funkcje.cpp@{Funkcje.cpp}}
+\doxysubsubsection{get\_vertices()}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ get\+\_\+vertices (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Vertices }\end{DoxyParamCaption})}
+
+
+
+funkcja wstawiajaca do vektora first\+\_\+vertices wierzcholki startowe z pliku tekstowego Vertices.\+txt 
+
+\mbox{\label{_funkcje_8cpp_ac15f044d122eb174ab0928523238b4ee}} 
+\index{Funkcje.cpp@{Funkcje.cpp}!step\_by\_step@{step\_by\_step}}
+\index{step\_by\_step@{step\_by\_step}!Funkcje.cpp@{Funkcje.cpp}}
+\doxysubsubsection{step\_by\_step()}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ step\+\_\+by\+\_\+step (\begin{DoxyParamCaption}\item[{std\+::map$<$ std\+::string, double $>$ \&}]{result,  }\item[{std\+::map$<$ std\+::string, std\+::string $>$ \&}]{last\+\_\+step,  }\item[{std\+::string}]{start\+\_\+node }\end{DoxyParamCaption})}
+
+
+
+Przywracanie sciezki. 
+
+zmienna path bedzie tablica string w odwiedzonych podczas funkcji Dijkstra
+
+dla kazdego wierzcholka z Dijkstry
+
+current\+\_\+vertex -\/ na ostatni wierzcholek odwiedzony w Dijkstrze
+
+wez ostatni wierzcholek odwiedzony w result i dla niego
+
+odwracam tablice path tak aby wskazywala droge od pierwszego do ostatniego, a nie na odwrot
+
+dodaje do vektora paths vektor path
