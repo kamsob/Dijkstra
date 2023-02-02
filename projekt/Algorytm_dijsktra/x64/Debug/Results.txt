@@ -1,2 +1,0 @@
-W tym pliku zostan¹ zapisane najkrótsze trasy do pozosta³ych wierzcho³ków z punktów podanych w pliku: Vertices.txt
-jeœli danego wierzcho³ka nie ma w grafie zostanie przekazany komunikat o tym
